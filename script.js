@@ -1,726 +1,821 @@
 "use strict";
 
-/*
-    Princess Pet Grooming Demo
-
-    IMPORTANT:
-    Replace every temporary WhatsApp number in index.html:
-    13050000000
-
-    Use the client's real number with country code and no:
-    - plus sign
-    - spaces
-    - parentheses
-    - hyphens
-*/
-
 const translations = {
-    en: {
-        demoNotice:
-            "Demo website created to preview a possible design for Princess Pet Grooming.",
+  en: {
+    demoNotice:
+      "Princess Pet Grooming — Demo website created to preview a possible design.",
 
-        navHome: "Home",
-        navServices: "Services",
-        navPackages: "Packages",
-        navAbout: "About",
-        navGallery: "Gallery",
-        navTestimonials: "Testimonials",
-        navFaq: "FAQ",
-        navContact: "Book Now",
+    navHome: "Home",
+    navServices: "Services",
+    navPackages: "Packages",
+    navAbout: "About",
+    navGallery: "Gallery",
+    navTestimonials: "Testimonials",
+    navFaq: "FAQ",
+    navContact: "Book Now",
 
-        heroEyebrow: "Mobile pet grooming in Miami-Dade",
-        heroTitle: "Gentle grooming brought directly to your home",
-        heroText:
-            "Professional, patient and convenient grooming that helps your dog look and feel their best without leaving home.",
-        heroWhatsapp: "Request an Appointment",
-        heroGallery: "View Our Work",
-        heroFeature1: "Gentle and patient care",
-        heroFeature2: "Service at your home",
-        heroFeature3: "Personalized attention",
+    heroEyebrow: "Mobile pet grooming in Miami-Dade",
+    heroTitle: "Gentle grooming brought directly to your home",
+    heroText:
+      "Professional, patient and convenient grooming that helps your dog look and feel their best without leaving home.",
+    heroWhatsapp: "Request an Appointment",
+    heroGallery: "View Our Work",
+    heroFeature1: "Gentle and patient care",
+    heroFeature2: "Service at your home",
+    heroFeature3: "Personalized attention",
 
-        introLabel: "Care, comfort and convenience",
-        introTitle: "A calmer grooming experience for your pet",
-        introText:
-            "Princess Pet Grooming brings professional grooming directly to families throughout Miami-Dade. Every appointment is handled with patience, attention and respect for your dog's individual needs.",
-        introLink: "Learn more about our approach →",
+    introLabel: "Care, comfort and convenience",
+    introTitle: "A calmer grooming experience for your pet",
+    introText:
+      "Princess Pet Grooming brings professional grooming directly to families throughout Miami-Dade. Every appointment is handled with patience, attention and respect for your dog's individual needs.",
+    introLink: "Learn more about our approach →",
 
-        servicesLabel: "What we offer",
-        servicesTitle: "Mobile grooming services",
-        servicesIntro:
-            "Services can be adjusted based on your dog's breed, size, coat and specific grooming needs.",
+    servicesLabel: "What we offer",
+    servicesTitle: "Mobile grooming services",
+    servicesIntro:
+      "Services can be adjusted based on your dog's breed, size, coat and specific grooming needs.",
 
-        service1Title: "Bath & Freshen Up",
-        service1Text:
-            "A refreshing maintenance service designed to keep your dog clean, comfortable and smelling great between full grooming appointments.",
-        service1Feat1: "Shampoo and conditioning",
-        service1Feat2: "Blow-dry and brushing",
-        service1Feat3: "Nail trimming",
-        service1Feat4: "Ear cleaning",
+    service1Title: "Bath & Freshen Up",
+    service1Text:
+      "A refreshing maintenance service designed to keep your dog clean, comfortable and smelling great between full grooming appointments.",
+    service1Feat1: "Shampoo and conditioning",
+    service1Feat2: "Blow-dry and brushing",
+    service1Feat3: "Nail trimming",
+    service1Feat4: "Ear cleaning",
 
-        popularBadge: "Most Popular",
+    popularBadge: "Most Popular",
 
-        service2Title: "Complete Grooming",
-        service2Text:
-            "A complete grooming appointment with bathing, brushing and a customized haircut based on your preferences and your dog's coat.",
-        service2Feat1: "Bath and conditioning",
-        service2Feat2: "Customized haircut",
-        service2Feat3: "Nail trimming",
-        service2Feat4: "Ear cleaning and finishing spray",
+    service2Title: "Complete Grooming",
+    service2Text:
+      "A complete grooming appointment with bathing, brushing and a customized haircut based on your preferences and your dog's coat.",
+    service2Feat1: "Bath and conditioning",
+    service2Feat2: "Customized haircut",
+    service2Feat3: "Nail trimming",
+    service2Feat4: "Ear cleaning and finishing spray",
 
-        service3Title: "Princess Spa Experience",
-        service3Text:
-            "An upgraded grooming experience with added coat care and finishing details for dogs needing extra attention.",
-        service3Feat1: "Complete grooming service",
-        service3Feat2: "Deep-conditioning treatment",
-        service3Feat3: "De-shedding or detangling treatment",
-        service3Feat4: "Premium finishing details",
+    service3Title: "Princess Spa Experience",
+    service3Text:
+      "An upgraded grooming experience with added coat care and finishing details for dogs needing extra attention.",
+    service3Feat1: "Complete grooming service",
+    service3Feat2: "Deep-conditioning treatment",
+    service3Feat3: "De-shedding or detangling treatment",
+    service3Feat4: "Premium finishing details",
 
-        packagesLabel: "Sample pricing",
-        packagesTitle: "Grooming packages",
-        packagesIntro:
-            "Final pricing depends on size, breed, coat condition, temperament and requested services.",
-        startingAt: "Starting at",
+    packagesLabel: "Sample pricing",
+    packagesTitle: "Grooming packages",
+    packagesIntro:
+      "Final pricing depends on size, breed, coat condition, temperament and requested services.",
+    startingAt: "Starting at",
 
-        package1Subtitle: "Essential Care",
-        package1Title: "Bath & Fresh",
-        package1Feat1: "Bath with quality shampoo",
-        package1Feat2: "Conditioning treatment",
-        package1Feat3: "Blow-dry and brushing",
-        package1Feat4: "Nail and ear care",
-        package1Button: "Ask About This Package",
+    package1Subtitle: "Essential Care",
+    package1Title: "Bath & Fresh",
+    package1Feat1: "Bath with quality shampoo",
+    package1Feat2: "Conditioning treatment",
+    package1Feat3: "Blow-dry and brushing",
+    package1Feat4: "Nail and ear care",
+    package1Button: "Ask About This Package",
 
-        recommendedBadge: "Recommended",
+    recommendedBadge: "Recommended",
 
-        package2Subtitle: "Complete Care",
-        package2Title: "Full Grooming",
-        package2Feat1: "Everything in Bath & Fresh",
-        package2Feat2: "Customized haircut",
-        package2Feat3: "Paw and sanitary trimming",
-        package2Feat4: "Finishing fragrance and accessory",
-        package2Button: "Request Full Grooming",
+    package2Subtitle: "Complete Care",
+    package2Title: "Full Grooming",
+    package2Feat1: "Everything in Bath & Fresh",
+    package2Feat2: "Customized haircut",
+    package2Feat3: "Paw and sanitary trimming",
+    package2Feat4: "Finishing fragrance and accessory",
+    package2Button: "Request Full Grooming",
 
-        package3Subtitle: "Premium Care",
-        package3Title: "Princess Spa",
-        package3Feat1: "Everything in Full Grooming",
-        package3Feat2: "Deep-conditioning treatment",
-        package3Feat3: "De-shedding or detangling care",
-        package3Feat4: "Premium finishing treatment",
-        package3Button: "Ask About Princess Spa",
+    package3Subtitle: "Premium Care",
+    package3Title: "Princess Spa",
+    package3Feat1: "Everything in Full Grooming",
+    package3Feat2: "Deep-conditioning treatment",
+    package3Feat3: "De-shedding or detangling care",
+    package3Feat4: "Premium finishing treatment",
+    package3Button: "Ask About Princess Spa",
 
-        pricingNote:
-            "Demo pricing only. Additional charges may apply for large breeds, severe matting, excessive shedding or special handling.",
+    pricingNote:
+      "Demo pricing only. Additional charges may apply for large breeds, severe matting, excessive shedding or special handling.",
 
-        aboutLabel: "About Princess Pet Grooming",
-        aboutTitle:
-            "Personal attention without the stressful salon visit",
-        aboutText1:
-            "Princess Pet Grooming was created to provide dogs and their families with a convenient and more personal grooming experience. By coming directly to your home, the process becomes easier for busy owners and more comfortable for many pets.",
-        aboutText2:
-            "Each dog is treated with patience and gentle care. Appointments are never approached as one-size-fits-all; the service is adjusted around the dog's coat, personality and individual needs.",
+    aboutLabel: "About Princess Pet Grooming",
+    aboutTitle:
+      "Personal attention without the stressful salon visit",
+    aboutText1:
+      "Princess Pet Grooming was created to provide dogs and their families with a convenient and more personal grooming experience. By coming directly to your home, the process becomes easier for busy owners and more comfortable for many pets.",
+    aboutText2:
+      "Each dog is treated with patience and gentle care. Appointments are never approached as one-size-fits-all; the service is adjusted around the dog's coat, personality and individual needs.",
 
-        aboutAccentTitle: "Grooming with patience",
-        aboutAccentText: "Because every dog deserves to feel safe.",
+    aboutAccentTitle: "Grooming with patience",
+    aboutAccentText:
+      "Because every dog deserves to feel safe.",
 
-        aboutPoint1Title: "Mobile convenience",
-        aboutPoint1Text: "Serving homes throughout Miami-Dade.",
-        aboutPoint2Title: "Gentle handling",
-        aboutPoint2Text:
-            "Patient care focused on your dog's comfort.",
-        aboutPoint3Title: "Personal service",
-        aboutPoint3Text:
-            "Individual attention during every appointment.",
+    aboutPoint1Title: "Mobile convenience",
+    aboutPoint1Text: "Serving homes throughout Miami-Dade.",
+    aboutPoint2Title: "Gentle handling",
+    aboutPoint2Text:
+      "Patient care focused on your dog's comfort.",
+    aboutPoint3Title: "Personal service",
+    aboutPoint3Text:
+      "Individual attention during every appointment.",
 
-        galleryLabel: "Recent clients",
-        galleryTitle: "Fresh cuts and happy pups",
-        galleryIntro: "Select any photo to view it in full size.",
+    galleryLabel: "Recent clients",
+    galleryTitle: "Fresh cuts and happy pups",
+    galleryIntro:
+      "Select any photo to view it in full size.",
 
-        testimonialLabel: "Client experience",
-        testimonialTitle: "Trusted by local pet families",
-        testimonialText:
-            "“I can't recommend Princess Pet Grooming enough. The fact that she comes to my home makes everything so convenient, and she's always on time and very professional. She's incredibly patient and gentle with my dog, which gives me so much peace of mind. You can tell she truly loves what she does. Every time she's done, my dog looks amazing, smells great, and is so happy. We wouldn't trust anyone else with him!”",
+    testimonialLabel: "Client experience",
+    testimonialTitle: "Trusted by local pet families",
+    testimonialText:
+      "“I can't recommend Princess Pet Grooming enough. The fact that she comes to my home makes everything so convenient, and she's always on time and very professional. She's incredibly patient and gentle with my dog, which gives me so much peace of mind. You can tell she truly loves what she does. Every time she's done, my dog looks amazing, smells great, and is so happy. We wouldn't trust anyone else with him!”",
 
-        areaLabel: "Mobile service area",
-        areaTitle: "Grooming throughout Miami-Dade",
-        areaText:
-            "Princess Pet Grooming travels directly to clients throughout Miami-Dade County. Send your ZIP code through WhatsApp to confirm availability in your neighborhood.",
-        areaButton: "Check My Area",
+    faqLabel: "Before your appointment",
+    faqTitle: "Frequently asked questions",
 
-        faqLabel: "Before your appointment",
-        faqTitle: "Frequently asked questions",
+    faqQ1: "Do you come directly to my home?",
+    faqA1:
+      "Yes. Princess Pet Grooming provides mobile service and travels directly to clients throughout Miami-Dade.",
 
-        faqQ1: "Do you come directly to my home?",
-        faqA1:
-            "Yes. Princess Pet Grooming provides mobile service and travels directly to clients throughout Miami-Dade.",
+    faqQ2: "How is the final price determined?",
+    faqA2:
+      "Pricing depends on your dog's breed, size, coat condition, temperament and the services requested. A final estimate can be provided after receiving basic information and a recent photo.",
 
-        faqQ2: "How is the final price determined?",
-        faqA2:
-            "Pricing depends on your dog's breed, size, coat condition, temperament and the services requested. A final estimate can be provided after receiving basic information and a recent photo.",
+    faqQ3: "What information should I send when booking?",
+    faqA3:
+      "Please provide your dog's breed, approximate weight, requested service, current coat condition, ZIP code and a recent photo.",
 
-        faqQ3: "What information should I send when booking?",
-        faqA3:
-            "Please provide your dog's breed, approximate weight, requested service, current coat condition, ZIP code and a recent photo.",
+    faqQ4: "Do you work with nervous dogs?",
+    faqA4:
+      "Every dog is handled patiently and gently. Please mention any anxiety, sensitivity or behavioral concerns before the appointment so the groomer can determine the safest approach.",
 
-        faqQ4: "Do you work with nervous dogs?",
-        faqA4:
-            "Every dog is handled patiently and gently. Please mention any anxiety, sensitivity or behavioral concerns before the appointment so the groomer can determine the safest approach.",
+    faqQ5: "How often should my dog be groomed?",
+    faqA5:
+      "The ideal schedule depends on breed, coat type, lifestyle and haircut preference. Many dogs benefit from professional grooming every four to eight weeks.",
 
-        faqQ5: "How often should my dog be groomed?",
-        faqA5:
-            "The ideal schedule depends on breed, coat type, lifestyle and haircut preference. Many dogs benefit from professional grooming every four to eight weeks.",
+    faqQ6: "How do I request an appointment?",
+    faqA6:
+      "Use any WhatsApp button on this website to send your information and request available dates.",
 
-        faqQ6: "How do I request an appointment?",
-        faqA6:
-            "Use any WhatsApp button on this website to send your information and request available dates.",
+    ctaLabel: "Ready for a fresh look?",
+    ctaTitle: "Give your dog the royal treatment",
+    ctaText:
+      "Send a message with your dog's information and request your next mobile grooming appointment.",
+    ctaButton: "Message Us on WhatsApp",
 
-        ctaLabel: "Ready for a fresh look?",
-        ctaTitle: "Give your dog the royal treatment",
-        ctaText:
-            "Send a message with your dog's information and request your next mobile grooming appointment.",
-        ctaButton: "Message Us on WhatsApp",
+    footerDescription:
+      "Gentle and convenient mobile pet grooming throughout Miami-Dade, Florida.",
+    footerExplore: "Explore",
+    footerContact: "Contact",
+    footerCopyright:
+      "© 2026 Princess Pet Grooming. All rights reserved.",
+    footerCredit:
+      "Demo website by AV Digital Services."
+  },
 
-        footerDescription:
-            "Gentle and convenient mobile pet grooming throughout Miami-Dade, Florida.",
-        footerExplore: "Explore",
-        footerContact: "Contact",
-        footerCopyright:
-            "© 2026 Princess Pet Grooming. All rights reserved.",
-        footerCredit: "Demo website by AV Digital Services."
-    },
+  es: {
+    demoNotice:
+      "Princess Pet Grooming — Sitio web de demostración creado para mostrar un posible diseño.",
 
-    es: {
-        demoNotice:
-            "Sitio web de demostración creado para mostrar un posible diseño para Princess Pet Grooming.",
+    navHome: "Inicio",
+    navServices: "Servicios",
+    navPackages: "Paquetes",
+    navAbout: "Nosotros",
+    navGallery: "Galería",
+    navTestimonials: "Testimonios",
+    navFaq: "Preguntas",
+    navContact: "Reservar",
 
-        navHome: "Inicio",
-        navServices: "Servicios",
-        navPackages: "Paquetes",
-        navAbout: "Nosotros",
-        navGallery: "Galería",
-        navTestimonials: "Testimonios",
-        navFaq: "Preguntas",
-        navContact: "Reservar",
+    heroEyebrow: "Grooming móvil en Miami-Dade",
+    heroTitle:
+      "Cuidado y grooming directamente en la comodidad de tu hogar",
+    heroText:
+      "Un servicio profesional, paciente y conveniente para que tu perrito se vea y se sienta increíble sin tener que salir de casa.",
+    heroWhatsapp: "Solicitar una Cita",
+    heroGallery: "Ver Nuestro Trabajo",
+    heroFeature1: "Cuidado paciente y delicado",
+    heroFeature2: "Servicio en tu hogar",
+    heroFeature3: "Atención personalizada",
 
-        heroEyebrow: "Grooming móvil en Miami-Dade",
-        heroTitle: "Cuidado y grooming directamente en la comodidad de tu hogar",
-        heroText:
-            "Un servicio profesional, paciente y conveniente para que tu perrito se vea y se sienta increíble sin tener que salir de casa.",
-        heroWhatsapp: "Solicitar una Cita",
-        heroGallery: "Ver Nuestro Trabajo",
-        heroFeature1: "Cuidado paciente y delicado",
-        heroFeature2: "Servicio en tu hogar",
-        heroFeature3: "Atención personalizada",
+    introLabel: "Cuidado, comodidad y conveniencia",
+    introTitle:
+      "Una experiencia más tranquila para tu mascota",
+    introText:
+      "Princess Pet Grooming lleva el servicio profesional directamente a familias en todo Miami-Dade. Cada cita se realiza con paciencia, atención y respeto por las necesidades individuales de tu perrito.",
+    introLink:
+      "Conoce más sobre nuestra atención →",
 
-        introLabel: "Cuidado, comodidad y conveniencia",
-        introTitle: "Una experiencia más tranquila para tu mascota",
-        introText:
-            "Princess Pet Grooming lleva el servicio profesional directamente a familias en todo Miami-Dade. Cada cita se realiza con paciencia, atención y respeto por las necesidades individuales de tu perrito.",
-        introLink: "Conoce más sobre nuestra atención →",
+    servicesLabel: "Lo que ofrecemos",
+    servicesTitle: "Servicios de grooming móvil",
+    servicesIntro:
+      "Los servicios se pueden adaptar según la raza, el tamaño, el tipo de pelo y las necesidades específicas de tu perrito.",
 
-        servicesLabel: "Lo que ofrecemos",
-        servicesTitle: "Servicios de grooming móvil",
-        servicesIntro:
-            "Los servicios se pueden adaptar según la raza, el tamaño, el tipo de pelo y las necesidades específicas de tu perrito.",
+    service1Title: "Baño y Frescura",
+    service1Text:
+      "Un servicio de mantenimiento para mantener a tu perrito limpio, cómodo y con un olor agradable entre sus citas de grooming completo.",
+    service1Feat1: "Champú y acondicionador",
+    service1Feat2: "Secado y cepillado",
+    service1Feat3: "Corte de uñas",
+    service1Feat4: "Limpieza de oídos",
 
-        service1Title: "Baño y Frescura",
-        service1Text:
-            "Un servicio de mantenimiento para mantener a tu perrito limpio, cómodo y con un olor agradable entre sus citas de grooming completo.",
-        service1Feat1: "Champú y acondicionador",
-        service1Feat2: "Secado y cepillado",
-        service1Feat3: "Corte de uñas",
-        service1Feat4: "Limpieza de oídos",
+    popularBadge: "Más Popular",
 
-        popularBadge: "Más Popular",
+    service2Title: "Grooming Completo",
+    service2Text:
+      "Una cita completa con baño, cepillado y un corte personalizado de acuerdo con tus preferencias y el tipo de pelo de tu perrito.",
+    service2Feat1: "Baño y acondicionador",
+    service2Feat2: "Corte personalizado",
+    service2Feat3: "Corte de uñas",
+    service2Feat4: "Limpieza de oídos y fragancia",
 
-        service2Title: "Grooming Completo",
-        service2Text:
-            "Una cita completa con baño, cepillado y un corte personalizado de acuerdo con tus preferencias y el tipo de pelo de tu perrito.",
-        service2Feat1: "Baño y acondicionador",
-        service2Feat2: "Corte personalizado",
-        service2Feat3: "Corte de uñas",
-        service2Feat4: "Limpieza de oídos y fragancia",
+    service3Title: "Experiencia Princess Spa",
+    service3Text:
+      "Una experiencia mejorada con tratamientos adicionales para el pelo y detalles especiales para perritos que necesitan atención extra.",
+    service3Feat1: "Servicio de grooming completo",
+    service3Feat2:
+      "Tratamiento de acondicionamiento profundo",
+    service3Feat3: "Tratamiento para muda o nudos",
+    service3Feat4: "Detalles finales premium",
 
-        service3Title: "Experiencia Princess Spa",
-        service3Text:
-            "Una experiencia mejorada con tratamientos adicionales para el pelo y detalles especiales para perritos que necesitan atención extra.",
-        service3Feat1: "Servicio de grooming completo",
-        service3Feat2: "Tratamiento de acondicionamiento profundo",
-        service3Feat3: "Tratamiento para muda o nudos",
-        service3Feat4: "Detalles finales premium",
+    packagesLabel: "Precios de muestra",
+    packagesTitle: "Paquetes de grooming",
+    packagesIntro:
+      "El precio final depende del tamaño, la raza, la condición del pelo, el temperamento y los servicios solicitados.",
+    startingAt: "Desde",
 
-        packagesLabel: "Precios de muestra",
-        packagesTitle: "Paquetes de grooming",
-        packagesIntro:
-            "El precio final depende del tamaño, la raza, la condición del pelo, el temperamento y los servicios solicitados.",
-        startingAt: "Desde",
+    package1Subtitle: "Cuidado Esencial",
+    package1Title: "Baño y Frescura",
+    package1Feat1: "Baño con champú de calidad",
+    package1Feat2: "Tratamiento acondicionador",
+    package1Feat3: "Secado y cepillado",
+    package1Feat4: "Cuidado de uñas y oídos",
+    package1Button: "Consultar Este Paquete",
 
-        package1Subtitle: "Cuidado Esencial",
-        package1Title: "Baño y Frescura",
-        package1Feat1: "Baño con champú de calidad",
-        package1Feat2: "Tratamiento acondicionador",
-        package1Feat3: "Secado y cepillado",
-        package1Feat4: "Cuidado de uñas y oídos",
-        package1Button: "Consultar Este Paquete",
+    recommendedBadge: "Recomendado",
 
-        recommendedBadge: "Recomendado",
+    package2Subtitle: "Cuidado Completo",
+    package2Title: "Grooming Completo",
+    package2Feat1:
+      "Todo lo incluido en Baño y Frescura",
+    package2Feat2: "Corte personalizado",
+    package2Feat3:
+      "Recorte de patitas y área sanitaria",
+    package2Feat4: "Fragancia y accesorio final",
+    package2Button:
+      "Solicitar Grooming Completo",
 
-        package2Subtitle: "Cuidado Completo",
-        package2Title: "Grooming Completo",
-        package2Feat1: "Todo lo incluido en Baño y Frescura",
-        package2Feat2: "Corte personalizado",
-        package2Feat3: "Recorte de patitas y área sanitaria",
-        package2Feat4: "Fragancia y accesorio final",
-        package2Button: "Solicitar Grooming Completo",
+    package3Subtitle: "Cuidado Premium",
+    package3Title: "Princess Spa",
+    package3Feat1:
+      "Todo lo incluido en Grooming Completo",
+    package3Feat2: "Acondicionamiento profundo",
+    package3Feat3:
+      "Tratamiento para muda o nudos",
+    package3Feat4: "Tratamiento final premium",
+    package3Button: "Consultar Princess Spa",
 
-        package3Subtitle: "Cuidado Premium",
-        package3Title: "Princess Spa",
-        package3Feat1: "Todo lo incluido en Grooming Completo",
-        package3Feat2: "Acondicionamiento profundo",
-        package3Feat3: "Tratamiento para muda o nudos",
-        package3Feat4: "Tratamiento final premium",
-        package3Button: "Consultar Princess Spa",
+    pricingNote:
+      "Precios de demostración. Pueden aplicarse cargos adicionales por razas grandes, nudos severos, muda excesiva o manejo especial.",
 
-        pricingNote:
-            "Precios de demostración. Pueden aplicarse cargos adicionales por razas grandes, nudos severos, muda excesiva o manejo especial.",
+    aboutLabel: "Sobre Princess Pet Grooming",
+    aboutTitle:
+      "Atención personal sin el estrés de visitar un salón",
+    aboutText1:
+      "Princess Pet Grooming fue creado para ofrecer a los perritos y sus familias una experiencia conveniente y más personal. Al ir directamente hasta tu hogar, el proceso es más fácil para las familias ocupadas y más cómodo para muchas mascotas.",
+    aboutText2:
+      "Cada perrito recibe atención paciente y delicada. El servicio nunca se trata como algo igual para todos; cada cita se adapta al tipo de pelo, personalidad y necesidades individuales del perrito.",
 
-        aboutLabel: "Sobre Princess Pet Grooming",
-        aboutTitle:
-            "Atención personal sin el estrés de visitar un salón",
-        aboutText1:
-            "Princess Pet Grooming fue creado para ofrecer a los perritos y sus familias una experiencia conveniente y más personal. Al ir directamente hasta tu hogar, el proceso es más fácil para las familias ocupadas y más cómodo para muchas mascotas.",
-        aboutText2:
-            "Cada perrito recibe atención paciente y delicada. El servicio nunca se trata como algo igual para todos; cada cita se adapta al tipo de pelo, personalidad y necesidades individuales del perrito.",
+    aboutAccentTitle: "Grooming con paciencia",
+    aboutAccentText:
+      "Porque cada perrito merece sentirse seguro.",
 
-        aboutAccentTitle: "Grooming con paciencia",
-        aboutAccentText:
-            "Porque cada perrito merece sentirse seguro.",
+    aboutPoint1Title: "Comodidad móvil",
+    aboutPoint1Text:
+      "Servicio en hogares de Miami-Dade.",
+    aboutPoint2Title: "Trato delicado",
+    aboutPoint2Text:
+      "Atención paciente enfocada en la comodidad de tu perro.",
+    aboutPoint3Title: "Servicio personal",
+    aboutPoint3Text:
+      "Atención individual durante cada cita.",
 
-        aboutPoint1Title: "Comodidad móvil",
-        aboutPoint1Text: "Servicio en hogares de Miami-Dade.",
-        aboutPoint2Title: "Trato delicado",
-        aboutPoint2Text:
-            "Atención paciente enfocada en la comodidad de tu perro.",
-        aboutPoint3Title: "Servicio personal",
-        aboutPoint3Text:
-            "Atención individual durante cada cita.",
+    galleryLabel: "Clientes recientes",
+    galleryTitle:
+      "Cortes frescos y perritos felices",
+    galleryIntro:
+      "Selecciona cualquier foto para verla en tamaño completo.",
 
-        galleryLabel: "Clientes recientes",
-        galleryTitle: "Cortes frescos y perritos felices",
-        galleryIntro:
-            "Selecciona cualquier foto para verla en tamaño completo.",
+    testimonialLabel: "Experiencia de clientes",
+    testimonialTitle:
+      "La confianza de familias locales",
+    testimonialText:
+      "“No puedo recomendar lo suficiente a Princess Pet Grooming. El hecho de que venga hasta mi casa hace todo mucho más conveniente, y siempre es puntual y muy profesional. Es increíblemente paciente y delicada con mi perro, lo que me da muchísima tranquilidad. Se nota que verdaderamente ama lo que hace. Cada vez que termina, mi perro se ve increíble, huele muy bien y está muy feliz. ¡No confiaríamos en nadie más para atenderlo!”",
 
-        testimonialLabel: "Experiencia de clientes",
-        testimonialTitle: "La confianza de familias locales",
-        testimonialText:
-            "“No puedo recomendar lo suficiente a Princess Pet Grooming. El hecho de que venga hasta mi casa hace todo mucho más conveniente, y siempre es puntual y muy profesional. Es increíblemente paciente y delicada con mi perro, lo que me da muchísima tranquilidad. Se nota que verdaderamente ama lo que hace. Cada vez que termina, mi perro se ve increíble, huele muy bien y está muy feliz. ¡No confiaríamos en nadie más para atenderlo!”",
+    faqLabel: "Antes de tu cita",
+    faqTitle: "Preguntas frecuentes",
 
-        areaLabel: "Área de servicio móvil",
-        areaTitle: "Grooming en todo Miami-Dade",
-        areaText:
-            "Princess Pet Grooming viaja directamente hasta sus clientes en Miami-Dade. Envía tu código postal por WhatsApp para confirmar disponibilidad en tu zona.",
-        areaButton: "Confirmar Mi Área",
+    faqQ1: "¿Vienen directamente hasta mi casa?",
+    faqA1:
+      "Sí. Princess Pet Grooming ofrece servicio móvil y viaja directamente hasta sus clientes en Miami-Dade.",
 
-        faqLabel: "Antes de tu cita",
-        faqTitle: "Preguntas frecuentes",
+    faqQ2: "¿Cómo se determina el precio final?",
+    faqA2:
+      "El precio depende de la raza, tamaño, condición del pelo, temperamento y los servicios solicitados. Se puede proporcionar un estimado después de recibir información básica y una foto reciente.",
 
-        faqQ1: "¿Vienen directamente hasta mi casa?",
-        faqA1:
-            "Sí. Princess Pet Grooming ofrece servicio móvil y viaja directamente hasta sus clientes en Miami-Dade.",
+    faqQ3:
+      "¿Qué información debo enviar para reservar?",
+    faqA3:
+      "Envía la raza, el peso aproximado, el servicio deseado, la condición actual del pelo, tu código postal y una foto reciente.",
 
-        faqQ2: "¿Cómo se determina el precio final?",
-        faqA2:
-            "El precio depende de la raza, tamaño, condición del pelo, temperamento y los servicios solicitados. Se puede proporcionar un estimado después de recibir información básica y una foto reciente.",
+    faqQ4: "¿Trabajan con perros nerviosos?",
+    faqA4:
+      "Cada perro se atiende con paciencia y delicadeza. Informa con anticipación sobre cualquier ansiedad, sensibilidad o comportamiento especial para determinar la forma más segura de atenderlo.",
 
-        faqQ3: "¿Qué información debo enviar para reservar?",
-        faqA3:
-            "Envía la raza, el peso aproximado, el servicio deseado, la condición actual del pelo, tu código postal y una foto reciente.",
+    faqQ5:
+      "¿Con qué frecuencia debo llevar a mi perro al grooming?",
+    faqA5:
+      "La frecuencia ideal depende de la raza, el tipo de pelo, el estilo de vida y el corte deseado. Muchos perros se benefician de una cita profesional cada cuatro a ocho semanas.",
 
-        faqQ4: "¿Trabajan con perros nerviosos?",
-        faqA4:
-            "Cada perro se atiende con paciencia y delicadeza. Informa con anticipación sobre cualquier ansiedad, sensibilidad o comportamiento especial para determinar la forma más segura de atenderlo.",
+    faqQ6: "¿Cómo solicito una cita?",
+    faqA6:
+      "Utiliza cualquiera de los botones de WhatsApp en esta página para enviar la información de tu perro y solicitar las fechas disponibles.",
 
-        faqQ5: "¿Con qué frecuencia debo llevar a mi perro al grooming?",
-        faqA5:
-            "La frecuencia ideal depende de la raza, el tipo de pelo, el estilo de vida y el corte deseado. Muchos perros se benefician de una cita profesional cada cuatro a ocho semanas.",
+    ctaLabel: "¿Listo para un nuevo look?",
+    ctaTitle:
+      "Dale a tu perrito un tratamiento de realeza",
+    ctaText:
+      "Envía la información de tu perrito y solicita tu próxima cita de grooming móvil.",
+    ctaButton: "Escribir por WhatsApp",
 
-        faqQ6: "¿Cómo solicito una cita?",
-        faqA6:
-            "Utiliza cualquiera de los botones de WhatsApp en esta página para enviar la información de tu perro y solicitar las fechas disponibles.",
-
-        ctaLabel: "¿Listo para un nuevo look?",
-        ctaTitle: "Dale a tu perrito un tratamiento de realeza",
-        ctaText:
-            "Envía la información de tu perrito y solicita tu próxima cita de grooming móvil.",
-        ctaButton: "Escribir por WhatsApp",
-
-        footerDescription:
-            "Servicio móvil de grooming delicado y conveniente en Miami-Dade, Florida.",
-        footerExplore: "Explorar",
-        footerContact: "Contacto",
-        footerCopyright:
-            "© 2026 Princess Pet Grooming. Todos los derechos reservados.",
-        footerCredit:
-            "Sitio web de demostración creado por AV Digital Services."
-    }
+    footerDescription:
+      "Servicio móvil de grooming delicado y conveniente en Miami-Dade, Florida.",
+    footerExplore: "Explorar",
+    footerContact: "Contacto",
+    footerCopyright:
+      "© 2026 Princess Pet Grooming. Todos los derechos reservados.",
+    footerCredit:
+      "Sitio web de demostración creado por AV Digital Services."
+  }
 };
 
-/* =========================================
-   Mobile navigation
-========================================= */
+/* Mobile navigation */
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuToggle =
+  document.querySelector(".menu-toggle");
+
+const navLinks =
+  document.querySelector(".nav-links");
 
 if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-        const menuIsOpen = navLinks.classList.toggle("active");
+  menuToggle.addEventListener("click", () => {
+    const isOpen =
+      navLinks.classList.toggle("active");
 
-        menuToggle.textContent = menuIsOpen ? "×" : "☰";
+    menuToggle.textContent =
+      isOpen ? "×" : "☰";
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+  });
+
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.textContent = "☰";
+
         menuToggle.setAttribute(
-            "aria-expanded",
-            menuIsOpen.toString()
+          "aria-expanded",
+          "false"
         );
+      });
     });
 
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-            menuToggle.textContent = "☰";
-            menuToggle.setAttribute("aria-expanded", "false");
-        });
-    });
+  document.addEventListener("click", (event) => {
+    const clickedInsideMenu =
+      navLinks.contains(event.target) ||
+      menuToggle.contains(event.target);
 
-    document.addEventListener("click", (event) => {
-        const clickedInsideNavigation =
-            navLinks.contains(event.target) ||
-            menuToggle.contains(event.target);
+    if (!clickedInsideMenu) {
+      navLinks.classList.remove("active");
+      menuToggle.textContent = "☰";
 
-        if (!clickedInsideNavigation) {
-            navLinks.classList.remove("active");
-            menuToggle.textContent = "☰";
-            menuToggle.setAttribute("aria-expanded", "false");
-        }
-    });
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+    }
+  });
 }
 
-/* =========================================
-   Language selector
-========================================= */
+/* Language switcher */
 
-const languageButtons = document.querySelectorAll(".lang-btn");
-const translatableElements = document.querySelectorAll("[data-i18n]");
-const languageLinks = document.querySelectorAll(
+const languageButtons =
+  document.querySelectorAll(".lang-btn");
+
+const translatableElements =
+  document.querySelectorAll("[data-i18n]");
+
+const languageLinks =
+  document.querySelectorAll(
     "[data-href-es][data-href-en]"
-);
+  );
 
 function setLanguage(language) {
-    const selectedTranslations = translations[language];
+  const selectedTranslations =
+    translations[language];
 
-    if (!selectedTranslations) {
-        return;
+  if (!selectedTranslations) {
+    return;
+  }
+
+  translatableElements.forEach((element) => {
+    const translationKey =
+      element.getAttribute("data-i18n");
+
+    const translatedText =
+      selectedTranslations[translationKey];
+
+    if (typeof translatedText === "string") {
+      element.textContent = translatedText;
     }
+  });
 
-    translatableElements.forEach((element) => {
-        const translationKey = element.getAttribute("data-i18n");
-        const translatedText = selectedTranslations[translationKey];
+  languageLinks.forEach((link) => {
+    const translatedHref =
+      link.getAttribute(`data-href-${language}`);
 
-        if (typeof translatedText === "string") {
-            element.textContent = translatedText;
-        }
-    });
+    if (translatedHref) {
+      link.setAttribute("href", translatedHref);
+    }
+  });
 
-    languageLinks.forEach((link) => {
-        const translatedHref = link.getAttribute(
-            `data-href-${language}`
-        );
+  languageButtons.forEach((button) => {
+    const isActive =
+      button.getAttribute("data-lang") ===
+      language;
 
-        if (translatedHref) {
-            link.setAttribute("href", translatedHref);
-        }
-    });
+    button.classList.toggle(
+      "active",
+      isActive
+    );
 
-    languageButtons.forEach((button) => {
-        const buttonLanguage = button.getAttribute("data-lang");
-        const isActiveLanguage = buttonLanguage === language;
+    button.setAttribute(
+      "aria-pressed",
+      String(isActive)
+    );
+  });
 
-        button.classList.toggle("active", isActiveLanguage);
-        button.setAttribute(
-            "aria-pressed",
-            isActiveLanguage.toString()
-        );
-    });
+  document.documentElement.lang = language;
 
-    document.documentElement.lang = language;
-    localStorage.setItem("princessPetGroomingLanguage", language);
+  localStorage.setItem(
+    "princessPetGroomingLanguage",
+    language
+  );
 }
 
 languageButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        const selectedLanguage = button.getAttribute("data-lang");
-        setLanguage(selectedLanguage);
-    });
+  button.addEventListener("click", () => {
+    setLanguage(
+      button.getAttribute("data-lang")
+    );
+  });
 });
 
 const savedLanguage =
-    localStorage.getItem("princessPetGroomingLanguage") || "en";
+  localStorage.getItem(
+    "princessPetGroomingLanguage"
+  ) || "en";
 
 setLanguage(savedLanguage);
 
-/* =========================================
-   Gallery lightbox
-========================================= */
+/* Full-screen gallery */
 
 const galleryImages = Array.from(
-    document.querySelectorAll(".gallery-card img")
+  document.querySelectorAll(
+    ".gallery-card img"
+  )
 );
-
-let currentImageIndex = 0;
-let touchStartX = 0;
-let touchEndX = 0;
 
 if (galleryImages.length > 0) {
-    const lightbox = document.createElement("div");
-    lightbox.classList.add("lightbox");
-    lightbox.setAttribute("role", "dialog");
-    lightbox.setAttribute("aria-modal", "true");
-    lightbox.setAttribute("aria-label", "Image gallery viewer");
+  let currentImageIndex = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-    lightbox.innerHTML = `
-        <button
-            class="lightbox-close"
-            type="button"
-            aria-label="Close image viewer"
-        >
-            &times;
-        </button>
+  const lightbox =
+    document.createElement("div");
 
-        <button
-            class="lightbox-arrow lightbox-prev"
-            type="button"
-            aria-label="View previous image"
-        >
-            &#10094;
-        </button>
+  lightbox.className = "lightbox";
 
-        <img
-            class="lightbox-image"
-            src=""
-            alt="Enlarged grooming gallery image"
-        >
+  lightbox.setAttribute(
+    "role",
+    "dialog"
+  );
 
-        <button
-            class="lightbox-arrow lightbox-next"
-            type="button"
-            aria-label="View next image"
-        >
-            &#10095;
-        </button>
-    `;
+  lightbox.setAttribute(
+    "aria-modal",
+    "true"
+  );
 
-    document.body.appendChild(lightbox);
+  lightbox.setAttribute(
+    "aria-label",
+    "Full-screen grooming gallery"
+  );
 
-    const lightboxImage =
-        lightbox.querySelector(".lightbox-image");
+  lightbox.innerHTML = `
+    <button
+      class="lightbox-close"
+      type="button"
+      aria-label="Close gallery"
+    >
+      &times;
+    </button>
 
-    const closeButton =
-        lightbox.querySelector(".lightbox-close");
+    <button
+      class="lightbox-arrow lightbox-prev"
+      type="button"
+      aria-label="Previous photo"
+    >
+      &#10094;
+    </button>
 
-    const previousButton =
-        lightbox.querySelector(".lightbox-prev");
+    <div class="lightbox-stage">
+      <img
+        class="lightbox-image"
+        src=""
+        alt=""
+      >
+    </div>
 
-    const nextButton =
-        lightbox.querySelector(".lightbox-next");
+    <button
+      class="lightbox-arrow lightbox-next"
+      type="button"
+      aria-label="Next photo"
+    >
+      &#10095;
+    </button>
 
-    function updateLightboxImage() {
-        const selectedImage = galleryImages[currentImageIndex];
+    <div
+      class="lightbox-counter"
+      aria-live="polite"
+    ></div>
+  `;
 
-        lightboxImage.src = selectedImage.src;
-        lightboxImage.alt =
-            selectedImage.alt || "Enlarged grooming image";
-    }
+  document.body.appendChild(lightbox);
 
-    function openLightbox(index) {
-        currentImageIndex = index;
-        updateLightboxImage();
+  const lightboxImage =
+    lightbox.querySelector(
+      ".lightbox-image"
+    );
 
-        lightbox.classList.add("active");
-        document.body.style.overflow = "hidden";
-        closeButton.focus();
-    }
+  const closeButton =
+    lightbox.querySelector(
+      ".lightbox-close"
+    );
 
-    function closeLightbox() {
-        lightbox.classList.remove("active");
-        document.body.style.overflow = "";
-    }
+  const previousButton =
+    lightbox.querySelector(
+      ".lightbox-prev"
+    );
 
-    function showNextImage() {
-        currentImageIndex =
-            (currentImageIndex + 1) % galleryImages.length;
+  const nextButton =
+    lightbox.querySelector(
+      ".lightbox-next"
+    );
 
-        updateLightboxImage();
-    }
+  const imageCounter =
+    lightbox.querySelector(
+      ".lightbox-counter"
+    );
 
-    function showPreviousImage() {
-        currentImageIndex =
-            (currentImageIndex - 1 + galleryImages.length) %
-            galleryImages.length;
+  function updateLightbox() {
+    const selectedImage =
+      galleryImages[currentImageIndex];
 
-        updateLightboxImage();
-    }
+    lightboxImage.src =
+      selectedImage.currentSrc ||
+      selectedImage.src;
 
-    galleryImages.forEach((image, index) => {
-        image.setAttribute("tabindex", "0");
+    lightboxImage.alt =
+      selectedImage.alt ||
+      "Princess Pet Grooming gallery photo";
 
-        image.addEventListener("click", () => {
+    imageCounter.textContent =
+      `${currentImageIndex + 1} / ${galleryImages.length}`;
+  }
+
+  function openLightbox(index) {
+    currentImageIndex = index;
+
+    updateLightbox();
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow =
+      "hidden";
+
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+  }
+
+  function showNextImage() {
+    currentImageIndex =
+      (currentImageIndex + 1) %
+      galleryImages.length;
+
+    updateLightbox();
+  }
+
+  function showPreviousImage() {
+    currentImageIndex =
+      (
+        currentImageIndex -
+        1 +
+        galleryImages.length
+      ) % galleryImages.length;
+
+    updateLightbox();
+  }
+
+  galleryImages.forEach(
+    (image, index) => {
+      image.tabIndex = 0;
+
+      image.addEventListener(
+        "click",
+        () => {
+          openLightbox(index);
+        }
+      );
+
+      image.addEventListener(
+        "keydown",
+        (event) => {
+          if (
+            event.key === "Enter" ||
+            event.key === " "
+          ) {
+            event.preventDefault();
             openLightbox(index);
-        });
-
-        image.addEventListener("keydown", (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                openLightbox(index);
-            }
-        });
-    });
-
-    closeButton.addEventListener("click", closeLightbox);
-    nextButton.addEventListener("click", showNextImage);
-    previousButton.addEventListener("click", showPreviousImage);
-
-    lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-            closeLightbox();
+          }
         }
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (!lightbox.classList.contains("active")) {
-            return;
-        }
-
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
-
-        if (event.key === "ArrowRight") {
-            showNextImage();
-        }
-
-        if (event.key === "ArrowLeft") {
-            showPreviousImage();
-        }
-    });
-
-    lightbox.addEventListener(
-        "touchstart",
-        (event) => {
-            touchStartX = event.changedTouches[0].screenX;
-        },
-        {
-            passive: true
-        }
-    );
-
-    lightbox.addEventListener(
-        "touchend",
-        (event) => {
-            touchEndX = event.changedTouches[0].screenX;
-            handleSwipe();
-        },
-        {
-            passive: true
-        }
-    );
-
-    function handleSwipe() {
-        const swipeDistance = touchEndX - touchStartX;
-        const minimumSwipeDistance = 50;
-
-        if (swipeDistance > minimumSwipeDistance) {
-            showPreviousImage();
-        }
-
-        if (swipeDistance < -minimumSwipeDistance) {
-            showNextImage();
-        }
+      );
     }
+  );
+
+  closeButton.addEventListener(
+    "click",
+    closeLightbox
+  );
+
+  nextButton.addEventListener(
+    "click",
+    showNextImage
+  );
+
+  previousButton.addEventListener(
+    "click",
+    showPreviousImage
+  );
+
+  lightbox.addEventListener(
+    "click",
+    (event) => {
+      const clickedBackground =
+        event.target === lightbox ||
+        event.target.classList.contains(
+          "lightbox-stage"
+        );
+
+      if (clickedBackground) {
+        closeLightbox();
+      }
+    }
+  );
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (
+        !lightbox.classList.contains(
+          "active"
+        )
+      ) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (event.key === "ArrowRight") {
+        showNextImage();
+      }
+
+      if (event.key === "ArrowLeft") {
+        showPreviousImage();
+      }
+    }
+  );
+
+  lightbox.addEventListener(
+    "touchstart",
+    (event) => {
+      touchStartX =
+        event.changedTouches[0].screenX;
+    },
+    {
+      passive: true
+    }
+  );
+
+  lightbox.addEventListener(
+    "touchend",
+    (event) => {
+      touchEndX =
+        event.changedTouches[0].screenX;
+
+      const swipeDistance =
+        touchEndX - touchStartX;
+
+      if (swipeDistance > 50) {
+        showPreviousImage();
+      }
+
+      if (swipeDistance < -50) {
+        showNextImage();
+      }
+    },
+    {
+      passive: true
+    }
+  );
 }
 
-/* =========================================
-   Scroll reveal effects
-========================================= */
+/* Scroll effects */
 
-const revealItems = document.querySelectorAll(
+const revealItems =
+  document.querySelectorAll(
     [
-        ".section-heading",
-        ".intro-heading",
-        ".intro-copy",
-        ".service-card",
-        ".package-card",
-        ".about-photo",
-        ".about-image-accent",
-        ".about-text > *",
-        ".gallery-card",
-        ".testimonial-card",
-        ".service-area-content > *",
-        ".faq-container details",
-        ".final-cta-content > *"
+      ".section-heading",
+      ".intro-heading",
+      ".intro-copy",
+      ".service-card",
+      ".package-card",
+      ".about-photo",
+      ".about-image-accent",
+      ".about-text > *",
+      ".gallery-card",
+      ".testimonial-card",
+      ".faq-container details",
+      ".final-cta-content > *"
     ].join(", ")
-);
+  );
 
 revealItems.forEach((item) => {
-    item.classList.add("reveal-on-scroll");
+  item.classList.add(
+    "reveal-on-scroll"
+  );
 });
 
-const userPrefersReducedMotion = window.matchMedia(
+const prefersReducedMotion =
+  window.matchMedia(
     "(prefers-reduced-motion: reduce)"
-).matches;
+  ).matches;
 
-if (userPrefersReducedMotion) {
-    revealItems.forEach((item) => {
-        item.classList.add("visible");
-    });
+if (prefersReducedMotion) {
+  revealItems.forEach((item) => {
+    item.classList.add("visible");
+  });
 } else {
-    const revealObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.12,
-            rootMargin: "0px 0px -35px 0px"
-        }
+  const revealObserver =
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "visible"
+            );
+
+            revealObserver.unobserve(
+              entry.target
+            );
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin:
+          "0px 0px -35px 0px"
+      }
     );
 
-    revealItems.forEach((item) => {
-        revealObserver.observe(item);
-    });
+  revealItems.forEach((item) => {
+    revealObserver.observe(item);
+  });
 }
-
-/* =========================================
-   Header shadow after scrolling
-========================================= */
-
-const siteHeader = document.querySelector(".site-header");
-
-function updateHeaderShadow() {
-    if (!siteHeader) {
-        return;
-    }
-
-    if (window.scrollY > 15) {
-        siteHeader.style.boxShadow =
-            "0 8px 30px rgba(104, 22, 56, 0.09)";
-    } else {
-        siteHeader.style.boxShadow = "none";
-    }
-}
-
-window.addEventListener("scroll", updateHeaderShadow, {
-    passive: true
-});
-
-updateHeaderShadow();
