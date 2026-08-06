@@ -121,7 +121,16 @@ section {
 .brand {
   display: flex;
   align-items: center;
+  gap: 14px;
   flex-shrink: 0;
+}
+
+.brand-name {
+  color: var(--pink-800);
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .brand-logo {
@@ -1266,6 +1275,10 @@ p {
     max-width: 125px;
   }
 
+  .brand-name {
+    font-size: 1.1rem;
+  }
+
   .gallery-grid {
     columns: 3;
   }
@@ -1285,6 +1298,10 @@ p {
   .brand-logo {
     max-width: 110px;
     height: 58px;
+  }
+
+  .brand-name {
+    display: none;
   }
 
   .language-switcher {
