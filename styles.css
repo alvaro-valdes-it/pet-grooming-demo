@@ -393,6 +393,46 @@ p {
   padding: 80px 0;
 }
 
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-eyebrow,
+.hero h1,
+.hero-description,
+.hero-buttons,
+.hero-features {
+  animation: hero-fade-up 0.8s ease both;
+}
+
+.hero-eyebrow {
+  animation-delay: 0.05s;
+}
+
+.hero h1 {
+  animation-delay: 0.15s;
+}
+
+.hero-description {
+  animation-delay: 0.28s;
+}
+
+.hero-buttons {
+  animation-delay: 0.4s;
+}
+
+.hero-features {
+  animation-delay: 0.5s;
+}
+
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -928,11 +968,23 @@ p {
   background: var(--pink-100);
   color: var(--pink-700);
   content: "+";
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(0deg);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .faq-container details[open] summary::after {
-  content: "−";
+  background: var(--pink-200);
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.faq-container details {
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-container details[open] {
+  box-shadow: 0 10px 26px rgba(104, 22, 56, 0.08);
 }
 
 .faq-container details p {
@@ -1047,6 +1099,31 @@ p {
   color: var(--white);
   box-shadow: 0 12px 30px rgba(17, 114, 55, 0.35);
   font-size: 1.65rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  animation: whatsapp-pulse 2.8s ease-in-out infinite;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 16px 36px rgba(17, 114, 55, 0.45);
+  animation-play-state: paused;
+}
+
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 12px 30px rgba(17, 114, 55, 0.35),
+      0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+
+  50% {
+    box-shadow:
+      0 12px 30px rgba(17, 114, 55, 0.35),
+      0 0 0 10px rgba(37, 211, 102, 0);
+  }
 }
 
 /* Full-screen gallery */
@@ -1154,6 +1231,24 @@ p {
 .reveal-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.services-grid .reveal-on-scroll:nth-child(2),
+.packages-grid .reveal-on-scroll:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.services-grid .reveal-on-scroll:nth-child(3),
+.packages-grid .reveal-on-scroll:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.gallery-grid .reveal-on-scroll:nth-child(3n+2) {
+  transition-delay: 0.08s;
+}
+
+.gallery-grid .reveal-on-scroll:nth-child(3n+3) {
+  transition-delay: 0.16s;
 }
 
 /* Laptop */
@@ -1429,6 +1524,26 @@ p {
 
   .lightbox-counter {
     bottom: 82px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow,
+  .hero h1,
+  .hero-description,
+  .hero-buttons,
+  .hero-features {
+    animation: none;
+  }
+
+  .floating-whatsapp {
+    animation: none;
+  }
+
+  .reveal-on-scroll {
+    transition: none;
   }
 }
 

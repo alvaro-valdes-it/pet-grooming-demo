@@ -95,11 +95,18 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;800&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="styles.css">
+
+  <link
+    rel="preload"
+    as="image"
+    href="assets/images/hero/princess-groomer-with-dog.jpg"
+    fetchpriority="high"
+  >
 </head>
 
 <body>
@@ -122,6 +129,7 @@
           src="assets/images/branding/princess-pet-grooming-logo.png"
           alt="Princess Pet Grooming logo"
           class="brand-logo"
+          decoding="async"
         >
       </a>
 
@@ -212,6 +220,8 @@
           src="assets/images/hero/princess-groomer-with-dog.jpg"
           alt="Princess Pet Grooming groomer holding a dog"
           class="hero-image"
+          fetchpriority="high"
+          decoding="async"
         >
 
         <div class="hero-overlay"></div>
@@ -736,6 +746,8 @@
             src="assets/images/hero/princess-groomer-with-dog.jpg"
             alt="Princess Pet Grooming caring for a dog"
             class="about-photo"
+            loading="lazy"
+            decoding="async"
           >
 
           <div class="about-image-accent">
@@ -1178,6 +1190,8 @@
         <img
           src="assets/images/branding/princess-pet-grooming-logo.png"
           alt="Princess Pet Grooming logo"
+          loading="lazy"
+          decoding="async"
         >
 
         <p data-i18n="footerDescription">
