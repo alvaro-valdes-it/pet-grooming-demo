@@ -3,22 +3,23 @@
 const translations = {
   en: {
     demoNotice:
-      "Princess Pet Grooming — Demo website created to preview a possible design.",
+      "Bark & Bloom Mobile Grooming — Fictional demo website created by AV Digital Services.",
 
     navHome: "Home",
     navServices: "Services",
     navPackages: "Packages",
     navAbout: "About",
+    navBooking: "Booking",
     navGallery: "Gallery",
     navTestimonials: "Testimonials",
     navFaq: "FAQ",
     navContact: "Book Now",
 
     heroEyebrow: "Mobile pet grooming in Miami-Dade",
-    heroTitle: "Gentle grooming brought directly to your home",
+    heroTitle: "Gentle mobile grooming, right at your doorstep",
     heroText:
-      "Professional, patient and convenient grooming that helps your dog look and feel their best without leaving home.",
-    heroWhatsapp: "Request an Appointment",
+      "Professional mobile dog grooming designed to make appointments easier for pets and their families throughout Miami-Dade.",
+    heroBooking: "Request an Appointment",
     heroGallery: "View Our Work",
     heroFeature1: "Gentle and patient care",
     heroFeature2: "Service at your home",
@@ -27,7 +28,7 @@ const translations = {
     introLabel: "Care, comfort and convenience",
     introTitle: "A calmer grooming experience for your pet",
     introText:
-      "Princess Pet Grooming brings professional grooming directly to families throughout Miami-Dade. Every appointment is handled with patience, attention and respect for your dog's individual needs.",
+      "Bark & Bloom Mobile Grooming brings professional grooming directly to families throughout Miami-Dade. Every appointment is designed around patience, attention and respect for your dog's individual needs.",
     introLink: "Learn more about our approach →",
 
     servicesLabel: "What we offer",
@@ -35,31 +36,31 @@ const translations = {
     servicesIntro:
       "Services can be adjusted based on your dog's breed, size, coat and specific grooming needs.",
 
-    service1Title: "Bath & Freshen Up",
+    service1Title: "Bath & Brush",
     service1Text:
       "A refreshing maintenance service designed to keep your dog clean, comfortable and smelling great between full grooming appointments.",
     service1Feat1: "Shampoo and conditioning",
-    service1Feat2: "Blow-dry and brushing",
+    service1Feat2: "Blow dry and brushing",
     service1Feat3: "Nail trimming",
     service1Feat4: "Ear cleaning",
 
     popularBadge: "Most Popular",
 
-    service2Title: "Complete Grooming",
+    service2Title: "Full Grooming",
     service2Text:
       "A complete grooming appointment with bathing, brushing and a customized haircut based on your preferences and your dog's coat.",
     service2Feat1: "Bath and conditioning",
-    service2Feat2: "Customized haircut",
-    service2Feat3: "Nail trimming",
-    service2Feat4: "Ear cleaning and finishing spray",
+    service2Feat2: "Full haircut",
+    service2Feat3: "Nail trimming and ear cleaning",
+    service2Feat4: "Finishing spray",
 
-    service3Title: "Princess Spa Experience",
+    service3Title: "Premium Coat Care",
     service3Text:
       "An upgraded grooming experience with added coat care and finishing details for dogs needing extra attention.",
-    service3Feat1: "Complete grooming service",
-    service3Feat2: "Deep-conditioning treatment",
-    service3Feat3: "De-shedding or detangling treatment",
-    service3Feat4: "Premium finishing details",
+    service3Feat1: "Full grooming service",
+    service3Feat2: "Deep conditioning",
+    service3Feat3: "De-shedding and detangling",
+    service3Feat4: "Coat treatment",
 
     packagesLabel: "Sample pricing",
     packagesTitle: "Grooming packages",
@@ -68,39 +69,39 @@ const translations = {
     startingAt: "Starting at",
 
     package1Subtitle: "Essential Care",
-    package1Title: "Bath & Fresh",
-    package1Feat1: "Bath with quality shampoo",
-    package1Feat2: "Conditioning treatment",
-    package1Feat3: "Blow-dry and brushing",
-    package1Feat4: "Nail and ear care",
-    package1Button: "Ask About This Package",
+    package1Title: "Bath & Brush",
+    package1Feat1: "Shampoo and conditioning",
+    package1Feat2: "Blow dry and brushing",
+    package1Feat3: "Nail trimming",
+    package1Feat4: "Ear cleaning",
+    package1Button: "Request This Package",
 
     recommendedBadge: "Recommended",
 
     package2Subtitle: "Complete Care",
     package2Title: "Full Grooming",
-    package2Feat1: "Everything in Bath & Fresh",
-    package2Feat2: "Customized haircut",
-    package2Feat3: "Paw and sanitary trimming",
-    package2Feat4: "Finishing fragrance and accessory",
+    package2Feat1: "Bath and conditioning",
+    package2Feat2: "Full haircut",
+    package2Feat3: "Nail trimming and ear cleaning",
+    package2Feat4: "Finishing spray",
     package2Button: "Request Full Grooming",
 
     package3Subtitle: "Premium Care",
-    package3Title: "Princess Spa",
+    package3Title: "Premium Coat Care",
     package3Feat1: "Everything in Full Grooming",
-    package3Feat2: "Deep-conditioning treatment",
-    package3Feat3: "De-shedding or detangling care",
-    package3Feat4: "Premium finishing treatment",
-    package3Button: "Ask About Princess Spa",
+    package3Feat2: "Deep conditioning",
+    package3Feat3: "De-shedding and detangling",
+    package3Feat4: "Coat treatment",
+    package3Button: "Request This Package",
 
     pricingNote:
-      "Demo pricing only. Additional charges may apply for large breeds, severe matting, excessive shedding or special handling.",
+      "Sample pricing shown for demonstration purposes only.",
 
-    aboutLabel: "About Princess Pet Grooming",
+    aboutLabel: "About Bark & Bloom Mobile Grooming",
     aboutTitle:
       "Personal attention without the stressful salon visit",
     aboutText1:
-      "Princess Pet Grooming was created to provide dogs and their families with a convenient and more personal grooming experience. By coming directly to your home, the process becomes easier for busy owners and more comfortable for many pets.",
+      "Bark & Bloom Mobile Grooming is a fictional demo business created to show how a mobile grooming brand could offer dogs and their families a convenient and more personal grooming experience. By coming directly to your home, the process becomes easier for busy owners and more comfortable for many pets.",
     aboutText2:
       "Each dog is treated with patience and gentle care. Appointments are never approached as one-size-fits-all; the service is adjusted around the dog's coat, personality and individual needs.",
 
@@ -117,22 +118,62 @@ const translations = {
     aboutPoint3Text:
       "Individual attention during every appointment.",
 
-    galleryLabel: "Recent clients",
+    automationLabel: "Built for AV Digital Services clients",
+    automationTitle: "Less time answering messages. More time grooming.",
+    automationIntro:
+      "A real grooming business website can go beyond a simple brochure. Here is what AV Digital Services can build for a live client.",
+    automationItem1: "Customers can view services before contacting you",
+    automationItem2: "Customers can see starting prices",
+    automationItem3: "Online appointment requests",
+    automationItem4: "Pet information collected before the appointment",
+    automationItem5: "Automatic confirmation possibilities",
+    automationItem6: "Appointment reminder possibilities",
+    automationItem7: "Cancellation and rescheduling workflows",
+    automationItem8: "FAQ answers available 24/7",
+
+    bookingLabel: "Demo Booking Form",
+    bookingTitle: "Book Your Grooming Appointment",
+    bookingIntro:
+      "A real client website can connect this section to an online calendar so customers can view availability, select a service and request an appointment without sending multiple messages back and forth.",
+    fieldOwnerName: "Owner Name",
+    fieldPetName: "Pet Name",
+    fieldBreed: "Breed",
+    fieldWeight: "Approximate Weight",
+    fieldService: "Service",
+    fieldServiceOption1: "Bath & Brush",
+    fieldServiceOption2: "Full Grooming",
+    fieldServiceOption3: "Premium Coat Care",
+    fieldDate: "Preferred Date",
+    fieldTime: "Preferred Time",
+    fieldZip: "ZIP Code",
+    fieldNotes: "Notes",
+    bookingSubmit: "Request Appointment",
+    bookingConfirmation:
+      "Demo only — booking integration can be connected for a live client website.",
+
+    galleryLabel: "Recent appointments",
     galleryTitle: "Fresh cuts and happy pups",
     galleryIntro:
       "Select any photo to view it in full size.",
 
     testimonialLabel: "Client experience",
     testimonialTitle: "Trusted by local pet families",
-    testimonialText:
-      "“I can't recommend Princess Pet Grooming enough. The fact that she comes to my home makes everything so convenient, and she's always on time and very professional. She's incredibly patient and gentle with my dog, which gives me so much peace of mind. You can tell she truly loves what she does. Every time she's done, my dog looks amazing, smells great, and is so happy. We wouldn't trust anyone else with him!”",
+    testimonialDemoNotice:
+      "Sample testimonials — demo content, not real customer reviews.",
+    testimonialSampleBadge: "Sample testimonial — Demo content",
+    testimonial1Text:
+      "“Having the groomer come to our home made everything so much easier. My dog was calm the whole time and looked amazing afterward.”",
+    testimonial2Text:
+      "“Booking felt simple and the whole appointment was stress-free for my pup. Great communication from start to finish.”",
+    testimonial3Text:
+      "“Such a convenient way to keep our dog groomed regularly. Patient, gentle and always on time.”",
 
     faqLabel: "Before your appointment",
     faqTitle: "Frequently asked questions",
 
     faqQ1: "Do you come directly to my home?",
     faqA1:
-      "Yes. Princess Pet Grooming provides mobile service and travels directly to clients throughout Miami-Dade.",
+      "Yes. Bark & Bloom Mobile Grooming provides mobile service and travels directly to clients throughout Miami-Dade.",
 
     faqQ2: "How is the final price determined?",
     faqA2:
@@ -152,32 +193,37 @@ const translations = {
 
     faqQ6: "How do I request an appointment?",
     faqA6:
-      "Use any WhatsApp button on this website to send your information and request available dates.",
+      "Use the booking form on this website to send your information and request available dates.",
 
     ctaLabel: "Ready for a fresh look?",
-    ctaTitle: "Give your dog the royal treatment",
+    ctaTitle: "Give your dog a gentle grooming experience",
     ctaText:
-      "Send a message with your dog's information and request your next mobile grooming appointment.",
-    ctaButton: "Message Us on WhatsApp",
+      "Send your dog's information and request your next mobile grooming appointment.",
+    ctaButton: "Request an Appointment",
 
+    footerName: "Bark & Bloom Mobile Grooming",
     footerDescription:
-      "Gentle and convenient mobile pet grooming throughout Miami-Dade, Florida.",
+      "Fictional demonstration website. Miami-Dade, Florida.",
+    footerDemoCredit: "Demo created by AV Digital Services.",
     footerExplore: "Explore",
     footerContact: "Contact",
+    footerInstagramSoon: "Coming Soon",
+    footerAvdsLink: "Website Demo by AV Digital Services",
     footerCopyright:
-      "© 2026 Princess Pet Grooming. All rights reserved.",
+      "© 2026 Bark & Bloom Mobile Grooming. Fictional demo — not a real business.",
     footerCredit:
       "Demo website by AV Digital Services."
   },
 
   es: {
     demoNotice:
-      "Princess Pet Grooming — Sitio web de demostración creado para mostrar un posible diseño.",
+      "Bark & Bloom Mobile Grooming — Sitio web ficticio de demostración creado por AV Digital Services.",
 
     navHome: "Inicio",
     navServices: "Servicios",
     navPackages: "Paquetes",
     navAbout: "Nosotros",
+    navBooking: "Reservas",
     navGallery: "Galería",
     navTestimonials: "Testimonios",
     navFaq: "Preguntas",
@@ -185,10 +231,10 @@ const translations = {
 
     heroEyebrow: "Grooming móvil en Miami-Dade",
     heroTitle:
-      "Cuidado y grooming directamente en la comodidad de tu hogar",
+      "Grooming móvil y delicado, directo a la puerta de tu casa",
     heroText:
-      "Un servicio profesional, paciente y conveniente para que tu perrito se vea y se sienta increíble sin tener que salir de casa.",
-    heroWhatsapp: "Solicitar una Cita",
+      "Un servicio profesional de grooming móvil para perros, diseñado para facilitar las citas de mascotas y sus familias en todo Miami-Dade.",
+    heroBooking: "Solicitar una Cita",
     heroGallery: "Ver Nuestro Trabajo",
     heroFeature1: "Cuidado paciente y delicado",
     heroFeature2: "Servicio en tu hogar",
@@ -198,7 +244,7 @@ const translations = {
     introTitle:
       "Una experiencia más tranquila para tu mascota",
     introText:
-      "Princess Pet Grooming lleva el servicio profesional directamente a familias en todo Miami-Dade. Cada cita se realiza con paciencia, atención y respeto por las necesidades individuales de tu perrito.",
+      "Bark & Bloom Mobile Grooming lleva el servicio profesional directamente a familias en todo Miami-Dade. Cada cita se diseña con paciencia, atención y respeto por las necesidades individuales de tu perrito.",
     introLink:
       "Conoce más sobre nuestra atención →",
 
@@ -207,7 +253,7 @@ const translations = {
     servicesIntro:
       "Los servicios se pueden adaptar según la raza, el tamaño, el tipo de pelo y las necesidades específicas de tu perrito.",
 
-    service1Title: "Baño y Frescura",
+    service1Title: "Baño y Cepillado",
     service1Text:
       "Un servicio de mantenimiento para mantener a tu perrito limpio, cómodo y con un olor agradable entre sus citas de grooming completo.",
     service1Feat1: "Champú y acondicionador",
@@ -221,18 +267,18 @@ const translations = {
     service2Text:
       "Una cita completa con baño, cepillado y un corte personalizado de acuerdo con tus preferencias y el tipo de pelo de tu perrito.",
     service2Feat1: "Baño y acondicionador",
-    service2Feat2: "Corte personalizado",
-    service2Feat3: "Corte de uñas",
-    service2Feat4: "Limpieza de oídos y fragancia",
+    service2Feat2: "Corte completo",
+    service2Feat3: "Corte de uñas y limpieza de oídos",
+    service2Feat4: "Fragancia final",
 
-    service3Title: "Experiencia Princess Spa",
+    service3Title: "Cuidado Premium del Pelaje",
     service3Text:
       "Una experiencia mejorada con tratamientos adicionales para el pelo y detalles especiales para perritos que necesitan atención extra.",
     service3Feat1: "Servicio de grooming completo",
     service3Feat2:
-      "Tratamiento de acondicionamiento profundo",
-    service3Feat3: "Tratamiento para muda o nudos",
-    service3Feat4: "Detalles finales premium",
+      "Acondicionamiento profundo",
+    service3Feat3: "Tratamiento para muda y nudos",
+    service3Feat4: "Tratamiento del pelaje",
 
     packagesLabel: "Precios de muestra",
     packagesTitle: "Paquetes de grooming",
@@ -241,44 +287,42 @@ const translations = {
     startingAt: "Desde",
 
     package1Subtitle: "Cuidado Esencial",
-    package1Title: "Baño y Frescura",
-    package1Feat1: "Baño con champú de calidad",
-    package1Feat2: "Tratamiento acondicionador",
-    package1Feat3: "Secado y cepillado",
-    package1Feat4: "Cuidado de uñas y oídos",
+    package1Title: "Baño y Cepillado",
+    package1Feat1: "Champú y acondicionador",
+    package1Feat2: "Secado y cepillado",
+    package1Feat3: "Corte de uñas",
+    package1Feat4: "Limpieza de oídos",
     package1Button: "Consultar Este Paquete",
 
     recommendedBadge: "Recomendado",
 
     package2Subtitle: "Cuidado Completo",
     package2Title: "Grooming Completo",
-    package2Feat1:
-      "Todo lo incluido en Baño y Frescura",
-    package2Feat2: "Corte personalizado",
-    package2Feat3:
-      "Recorte de patitas y área sanitaria",
-    package2Feat4: "Fragancia y accesorio final",
+    package2Feat1: "Baño y acondicionador",
+    package2Feat2: "Corte completo",
+    package2Feat3: "Corte de uñas y limpieza de oídos",
+    package2Feat4: "Fragancia final",
     package2Button:
       "Solicitar Grooming Completo",
 
     package3Subtitle: "Cuidado Premium",
-    package3Title: "Princess Spa",
+    package3Title: "Cuidado Premium del Pelaje",
     package3Feat1:
       "Todo lo incluido en Grooming Completo",
     package3Feat2: "Acondicionamiento profundo",
     package3Feat3:
-      "Tratamiento para muda o nudos",
-    package3Feat4: "Tratamiento final premium",
-    package3Button: "Consultar Princess Spa",
+      "Tratamiento para muda y nudos",
+    package3Feat4: "Tratamiento del pelaje",
+    package3Button: "Consultar Este Paquete",
 
     pricingNote:
-      "Precios de demostración. Pueden aplicarse cargos adicionales por razas grandes, nudos severos, muda excesiva o manejo especial.",
+      "Precios de muestra mostrados únicamente con fines de demostración.",
 
-    aboutLabel: "Sobre Princess Pet Grooming",
+    aboutLabel: "Sobre Bark & Bloom Mobile Grooming",
     aboutTitle:
       "Atención personal sin el estrés de visitar un salón",
     aboutText1:
-      "Princess Pet Grooming fue creado para ofrecer a los perritos y sus familias una experiencia conveniente y más personal. Al ir directamente hasta tu hogar, el proceso es más fácil para las familias ocupadas y más cómodo para muchas mascotas.",
+      "Bark & Bloom Mobile Grooming es un negocio ficticio de demostración creado para mostrar cómo una marca de grooming móvil podría ofrecer a los perritos y sus familias una experiencia conveniente y más personal. Al ir directamente hasta tu hogar, el proceso es más fácil para las familias ocupadas y más cómodo para muchas mascotas.",
     aboutText2:
       "Cada perrito recibe atención paciente y delicada. El servicio nunca se trata como algo igual para todos; cada cita se adapta al tipo de pelo, personalidad y necesidades individuales del perrito.",
 
@@ -296,7 +340,44 @@ const translations = {
     aboutPoint3Text:
       "Atención individual durante cada cita.",
 
-    galleryLabel: "Clientes recientes",
+    automationLabel: "Creado para clientes de AV Digital Services",
+    automationTitle:
+      "Menos tiempo respondiendo mensajes. Más tiempo haciendo grooming.",
+    automationIntro:
+      "El sitio web de un negocio de grooming real puede ir más allá de un simple folleto. Esto es lo que AV Digital Services puede construir para un cliente real.",
+    automationItem1:
+      "Los clientes pueden ver los servicios antes de contactarte",
+    automationItem2: "Los clientes pueden ver los precios desde",
+    automationItem3: "Solicitudes de citas en línea",
+    automationItem4:
+      "Información de la mascota recopilada antes de la cita",
+    automationItem5: "Posibilidad de confirmación automática",
+    automationItem6: "Posibilidad de recordatorios de citas",
+    automationItem7:
+      "Flujos de cancelación y reprogramación",
+    automationItem8: "Respuestas a preguntas frecuentes las 24 horas",
+
+    bookingLabel: "Formulario de Reserva de Demostración",
+    bookingTitle: "Reserva tu Cita de Grooming",
+    bookingIntro:
+      "El sitio web de un cliente real puede conectar esta sección a un calendario en línea para que los clientes vean la disponibilidad, seleccionen un servicio y soliciten una cita sin enviar múltiples mensajes.",
+    fieldOwnerName: "Nombre del Dueño",
+    fieldPetName: "Nombre de la Mascota",
+    fieldBreed: "Raza",
+    fieldWeight: "Peso Aproximado",
+    fieldService: "Servicio",
+    fieldServiceOption1: "Baño y Cepillado",
+    fieldServiceOption2: "Grooming Completo",
+    fieldServiceOption3: "Cuidado Premium del Pelaje",
+    fieldDate: "Fecha Preferida",
+    fieldTime: "Hora Preferida",
+    fieldZip: "Código Postal",
+    fieldNotes: "Notas",
+    bookingSubmit: "Solicitar Cita",
+    bookingConfirmation:
+      "Solo demostración — la integración de reservas se puede conectar para un sitio web de cliente real.",
+
+    galleryLabel: "Citas recientes",
     galleryTitle:
       "Cortes frescos y perritos felices",
     galleryIntro:
@@ -305,15 +386,22 @@ const translations = {
     testimonialLabel: "Experiencia de clientes",
     testimonialTitle:
       "La confianza de familias locales",
-    testimonialText:
-      "“No puedo recomendar lo suficiente a Princess Pet Grooming. El hecho de que venga hasta mi casa hace todo mucho más conveniente, y siempre es puntual y muy profesional. Es increíblemente paciente y delicada con mi perro, lo que me da muchísima tranquilidad. Se nota que verdaderamente ama lo que hace. Cada vez que termina, mi perro se ve increíble, huele muy bien y está muy feliz. ¡No confiaríamos en nadie más para atenderlo!”",
+    testimonialDemoNotice:
+      "Testimonios de muestra — contenido de demostración, no son reseñas reales de clientes.",
+    testimonialSampleBadge: "Testimonio de muestra — Contenido de demostración",
+    testimonial1Text:
+      "“Que la groomer viniera hasta nuestra casa hizo todo mucho más fácil. Mi perro estuvo tranquilo todo el tiempo y quedó increíble.”",
+    testimonial2Text:
+      "“Reservar fue muy sencillo y toda la cita fue libre de estrés para mi perrito. Excelente comunicación de principio a fin.”",
+    testimonial3Text:
+      "“Una forma muy conveniente de mantener a nuestro perro arreglado regularmente. Paciente, delicada y siempre puntual.”",
 
     faqLabel: "Antes de tu cita",
     faqTitle: "Preguntas frecuentes",
 
     faqQ1: "¿Vienen directamente hasta mi casa?",
     faqA1:
-      "Sí. Princess Pet Grooming ofrece servicio móvil y viaja directamente hasta sus clientes en Miami-Dade.",
+      "Sí. Bark & Bloom Mobile Grooming ofrece servicio móvil y viaja directamente hasta sus clientes en Miami-Dade.",
 
     faqQ2: "¿Cómo se determina el precio final?",
     faqA2:
@@ -335,21 +423,25 @@ const translations = {
 
     faqQ6: "¿Cómo solicito una cita?",
     faqA6:
-      "Utiliza cualquiera de los botones de WhatsApp en esta página para enviar la información de tu perro y solicitar las fechas disponibles.",
+      "Utiliza el formulario de reserva en esta página para enviar la información de tu perro y solicitar las fechas disponibles.",
 
     ctaLabel: "¿Listo para un nuevo look?",
     ctaTitle:
-      "Dale a tu perrito un tratamiento de realeza",
+      "Dale a tu perrito una experiencia de grooming delicada",
     ctaText:
       "Envía la información de tu perrito y solicita tu próxima cita de grooming móvil.",
-    ctaButton: "Escribir por WhatsApp",
+    ctaButton: "Solicitar una Cita",
 
+    footerName: "Bark & Bloom Mobile Grooming",
     footerDescription:
-      "Servicio móvil de grooming delicado y conveniente en Miami-Dade, Florida.",
+      "Sitio web de demostración ficticio. Miami-Dade, Florida.",
+    footerDemoCredit: "Demostración creada por AV Digital Services.",
     footerExplore: "Explorar",
     footerContact: "Contacto",
+    footerInstagramSoon: "Próximamente",
+    footerAvdsLink: "Demostración del Sitio por AV Digital Services",
     footerCopyright:
-      "© 2026 Princess Pet Grooming. Todos los derechos reservados.",
+      "© 2026 Bark & Bloom Mobile Grooming. Demostración ficticia — no es un negocio real.",
     footerCredit:
       "Sitio web de demostración creado por AV Digital Services."
   }
@@ -416,11 +508,6 @@ const languageButtons =
 const translatableElements =
   document.querySelectorAll("[data-i18n]");
 
-const languageLinks =
-  document.querySelectorAll(
-    "[data-href-es][data-href-en]"
-  );
-
 function setLanguage(language) {
   const selectedTranslations =
     translations[language];
@@ -438,15 +525,6 @@ function setLanguage(language) {
 
     if (typeof translatedText === "string") {
       element.textContent = translatedText;
-    }
-  });
-
-  languageLinks.forEach((link) => {
-    const translatedHref =
-      link.getAttribute(`data-href-${language}`);
-
-    if (translatedHref) {
-      link.setAttribute("href", translatedHref);
     }
   });
 
@@ -469,7 +547,7 @@ function setLanguage(language) {
   document.documentElement.lang = language;
 
   localStorage.setItem(
-    "princessPetGroomingLanguage",
+    "barkAndBloomLanguage",
     language
   );
 }
@@ -484,10 +562,31 @@ languageButtons.forEach((button) => {
 
 const savedLanguage =
   localStorage.getItem(
-    "princessPetGroomingLanguage"
+    "barkAndBloomLanguage"
   ) || "en";
 
 setLanguage(savedLanguage);
+
+/* Demo booking form */
+
+const bookingForm =
+  document.getElementById("bookingForm");
+
+const bookingConfirmation =
+  document.getElementById("bookingConfirmation");
+
+if (bookingForm && bookingConfirmation) {
+  bookingForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    bookingConfirmation.hidden = false;
+
+    bookingConfirmation.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  });
+}
 
 /* Full-screen gallery */
 
@@ -598,7 +697,7 @@ if (galleryImages.length > 0) {
 
     lightboxImage.alt =
       selectedImage.alt ||
-      "Princess Pet Grooming gallery photo";
+      "Bark & Bloom Mobile Grooming gallery photo";
 
     imageCounter.textContent =
       `${currentImageIndex + 1} / ${galleryImages.length}`;
@@ -770,6 +869,7 @@ const revealItems =
       ".about-photo",
       ".about-image-accent",
       ".about-text > *",
+      ".automation-item",
       ".gallery-card",
       ".testimonial-card",
       ".faq-container details",
