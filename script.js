@@ -148,8 +148,9 @@ const translations = {
     fieldZip: "ZIP Code",
     fieldNotes: "Notes",
     bookingSubmit: "Request Appointment",
+    bookingDemoNotice: "Interactive Demo — No information is submitted.",
     bookingConfirmation:
-      "Demo only — booking integration can be connected for a live client website.",
+      "Demo only — a live client website can connect this form to a real booking calendar and automation system.",
 
     galleryLabel: "Recent appointments",
     galleryTitle: "Fresh cuts and happy pups",
@@ -208,7 +209,7 @@ const translations = {
     footerExplore: "Explore",
     footerContact: "Contact",
     footerInstagramSoon: "Coming Soon",
-    footerAvdsLink: "Website Demo by AV Digital Services",
+    footerAvdsLink: "Website Demo by AV Digital Services ↗",
     footerCopyright:
       "© 2026 Bark & Bloom Mobile Grooming. Fictional demo — not a real business.",
     footerCredit:
@@ -374,8 +375,9 @@ const translations = {
     fieldZip: "Código Postal",
     fieldNotes: "Notas",
     bookingSubmit: "Solicitar Cita",
+    bookingDemoNotice: "Demostración interactiva — No se envía ninguna información.",
     bookingConfirmation:
-      "Solo demostración — la integración de reservas se puede conectar para un sitio web de cliente real.",
+      "Solo demostración — un sitio web real puede conectar este formulario a un calendario de reservas y sistema de automatización.",
 
     galleryLabel: "Citas recientes",
     galleryTitle:
@@ -439,7 +441,7 @@ const translations = {
     footerExplore: "Explorar",
     footerContact: "Contacto",
     footerInstagramSoon: "Próximamente",
-    footerAvdsLink: "Demostración del Sitio por AV Digital Services",
+    footerAvdsLink: "Demostración del Sitio por AV Digital Services ↗",
     footerCopyright:
       "© 2026 Bark & Bloom Mobile Grooming. Demostración ficticia — no es un negocio real.",
     footerCredit:
@@ -566,6 +568,30 @@ const savedLanguage =
   ) || "en";
 
 setLanguage(savedLanguage);
+
+/* Missing image placeholders */
+
+function markImageAsBroken(image) {
+  const frame = image.closest(".img-frame");
+
+  if (frame) {
+    frame.classList.add("is-broken");
+  } else {
+    image.classList.add("img-broken-standalone");
+  }
+}
+
+document.querySelectorAll("img").forEach((image) => {
+  image.addEventListener(
+    "error",
+    () => markImageAsBroken(image),
+    { once: true }
+  );
+
+  if (image.complete && image.naturalWidth === 0) {
+    markImageAsBroken(image);
+  }
+});
 
 /* Demo booking form */
 

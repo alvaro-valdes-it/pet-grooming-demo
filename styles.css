@@ -50,6 +50,62 @@ img {
   font-size: 0;
 }
 
+/* Missing-image placeholders */
+
+.img-frame {
+  position: relative;
+}
+
+.img-frame.is-broken img {
+  visibility: hidden;
+}
+
+.img-frame.is-broken::before {
+  content: "🐾";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--pink-100), var(--pink-50));
+  color: var(--pink-300);
+  font-size: 2.25rem;
+}
+
+.gallery-card.is-broken::before {
+  flex-direction: column;
+  gap: 8px;
+  font-size: 2rem;
+}
+
+.brand-logo-frame.is-broken::before {
+  font-size: 1.3rem;
+}
+
+.footer-logo-frame.is-broken::before {
+  font-size: 2.6rem;
+}
+
+.gallery-card.is-broken::after {
+  content: "Photo coming soon";
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  color: var(--pink-500);
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.img-broken-standalone {
+  visibility: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -140,6 +196,13 @@ section {
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.brand-logo-frame {
+  display: inline-flex;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .brand-logo {
@@ -860,6 +923,7 @@ p {
 .gallery-card img {
   width: 100%;
   height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
   transition:
     transform 0.45s ease,
@@ -918,6 +982,28 @@ p {
       transparent 35%
     ),
     var(--pink-50);
+}
+
+.demo-form-notice {
+  display: flex;
+  max-width: 900px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 28px;
+  border: 1px solid var(--pink-300);
+  border-radius: 999px;
+  background: var(--pink-100);
+  padding: 12px 22px;
+  color: var(--pink-800);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.demo-form-notice-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
 }
 
 .booking-form {
@@ -1163,10 +1249,17 @@ p {
   padding-bottom: 55px;
 }
 
+.footer-logo-frame {
+  display: inline-block;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .footer-brand img {
   width: 110px;
   height: 110px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border-radius: 50%;
   object-fit: contain;
 }
@@ -1225,6 +1318,17 @@ p {
 .footer-contact span {
   color: rgba(255, 255, 255, 0.66);
   font-size: 0.87rem;
+}
+
+.footer-avds-link {
+  color: var(--pink-300) !important;
+  font-weight: 800;
+  transition: color 0.25s ease;
+}
+
+.footer-avds-link:hover {
+  color: var(--white) !important;
+  text-decoration: underline;
 }
 
 .footer-bottom {
@@ -1563,6 +1667,7 @@ p {
   }
 
   .about-image-wrapper {
+    width: 100%;
     max-width: 650px;
     margin-inline: auto;
   }

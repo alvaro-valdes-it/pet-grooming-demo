@@ -125,15 +125,17 @@
         href="#inicio"
         aria-label="Bark & Bloom Mobile Grooming home"
       >
-        <img
-          src="assets/images/branding/bark-bloom-logo.png"
-          alt="Bark & Bloom Mobile Grooming logo"
-          class="brand-logo"
-          decoding="async"
-        >
+        <span class="img-frame brand-logo-frame">
+          <img
+            src="assets/images/branding/bark-bloom-logo.png"
+            alt="Bark & Bloom Mobile Grooming logo"
+            class="brand-logo"
+            decoding="async"
+          >
+        </span>
 
         <span class="brand-name">
-          Bark & Bloom Mobile Grooming
+          Bark & Bloom
         </span>
       </a>
 
@@ -218,7 +220,7 @@
 
     <section class="hero" id="inicio">
 
-      <div class="hero-image-wrapper">
+      <div class="hero-image-wrapper img-frame">
 
         <img
           src="assets/images/hero/mobile-pet-grooming-hero.jpg"
@@ -727,10 +729,10 @@
     >
       <div class="container about-grid">
 
-        <div class="about-image-wrapper">
+        <div class="about-image-wrapper img-frame">
 
           <img
-            src="assets/images/hero/mobile-pet-grooming-hero.jpg"
+            src="assets/images/about/mobile-groomer-about.jpg"
             alt="Professional pet grooming result"
             class="about-photo"
             loading="lazy"
@@ -943,6 +945,13 @@
 
         </div>
 
+        <p class="demo-form-notice">
+          <span class="demo-form-notice-icon" aria-hidden="true">🔒</span>
+          <span data-i18n="bookingDemoNotice">
+            Interactive Demo — No information is submitted.
+          </span>
+        </p>
+
         <form class="booking-form" id="bookingForm" novalidate>
 
           <div class="form-field">
@@ -1008,7 +1017,7 @@
           data-i18n="bookingConfirmation"
           hidden
         >
-          Demo only — booking integration can be connected for a live client website.
+          Demo only — a live client website can connect this form to a real booking calendar and automation system.
         </p>
 
       </div>
@@ -1044,7 +1053,7 @@
 
         <div class="gallery-grid">
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-01.jpg"
               alt="Freshly groomed dog"
@@ -1052,7 +1061,7 @@
             >
           </figure>
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-02.jpg"
               alt="Mobile dog grooming"
@@ -1060,7 +1069,7 @@
             >
           </figure>
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-03.jpg"
               alt="Dog after grooming appointment"
@@ -1068,7 +1077,7 @@
             >
           </figure>
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-04.jpg"
               alt="Professional pet grooming result"
@@ -1076,7 +1085,7 @@
             >
           </figure>
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-05.jpg"
               alt="Freshly groomed dog"
@@ -1084,7 +1093,7 @@
             >
           </figure>
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-06.jpg"
               alt="Mobile dog grooming"
@@ -1092,7 +1101,7 @@
             >
           </figure>
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-07.jpg"
               alt="Dog after grooming appointment"
@@ -1100,7 +1109,7 @@
             >
           </figure>
 
-          <figure class="gallery-card">
+          <figure class="gallery-card img-frame">
             <img
               src="assets/images/gallery/dog-grooming-08.jpg"
               alt="Professional pet grooming result"
@@ -1364,12 +1373,14 @@
 
       <div class="footer-brand">
 
-        <img
-          src="assets/images/branding/bark-bloom-logo.png"
-          alt="Bark & Bloom Mobile Grooming logo"
-          loading="lazy"
-          decoding="async"
-        >
+        <span class="img-frame footer-logo-frame">
+          <img
+            src="assets/images/branding/bark-bloom-logo.png"
+            alt="Bark & Bloom Mobile Grooming logo"
+            loading="lazy"
+            decoding="async"
+          >
+        </span>
 
         <p data-i18n="footerName">
           Bark & Bloom Mobile Grooming
@@ -1429,12 +1440,13 @@
         </span>
 
         <a
+          class="footer-avds-link"
           href="https://avdigitalservices.com"
           target="_blank"
           rel="noopener noreferrer"
           data-i18n="footerAvdsLink"
         >
-          Website Demo by AV Digital Services
+          Website Demo by AV Digital Services ↗
         </a>
 
       </div>
